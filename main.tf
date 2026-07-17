@@ -533,3 +533,10 @@ resource "aws_lb_listener" "alb-listner" {
     target_group_arn = aws_lb_target_group.app-tg.arn
   }
 }
+
+
+# Output
+output "alb_dns_url" {
+  description = "DNS URL OF LB"
+  value = aws_lb.app-alb.dns_name
+}

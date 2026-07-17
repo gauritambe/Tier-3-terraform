@@ -386,7 +386,7 @@ resource "aws_security_group" "alb-sg" {
 # Key Pair
 resource "aws_key_pair" "app-key" {
   key_name = "app-key"
-  public_key = file("app-key.pub")
+  public_key = file(".ssh/id_ed25519.pub")
 
   tags = {
     Name = "app-key"

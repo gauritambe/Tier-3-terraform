@@ -1,2 +1,2 @@
 *.tfstate
-variables.tf
+.terraform*

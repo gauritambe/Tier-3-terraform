@@ -1,2 +1,2 @@
 *.tfstate
-variable.tf
+variables.tf

@@ -49,7 +49,7 @@ resource "aws_subnet" "app-private-subnet-1b" {
 resource "aws_subnet" "app-public-subnet-2" {
     vpc_id = aws_vpc.app-vpc.id
     cidr_block = "10.0.4.0/24"
-    availability_zone = "ap-south-1a"
+    availability_zone = "ap-south-1b"
     depends_on = [ aws_vpc.app-vpc ]
 
     tags = {
@@ -400,6 +400,7 @@ resource "aws_instance" "app-webserver-1" {
   ami = var.aws-ami
   instance_type = "t3.micro"
   subnet_id = aws_subnet.app-public-subnet-1.id
+  associate_public_ip_address = true
   key_name = aws_key_pair.app-key.key_name
   vpc_security_group_ids = [ aws_security_group.webserver-sg.id ]
 
@@ -440,6 +441,7 @@ resource "aws_instance" "app-webserver-2" {
   ami = var.aws-ami
   instance_type = "t3.micro"
   subnet_id = aws_subnet.app-public-subnet-2.id
+  associate_public_ip_address = true
   key_name = aws_key_pair.app-key.key_name
   vpc_security_group_ids = [ aws_security_group.webserver-sg.id ]
 

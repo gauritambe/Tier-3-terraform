@@ -25,7 +25,7 @@ resource "aws_subnet" "app-public-subnet-1" {
 resource "aws_subnet" "app-private-subnet-1a" {
     vpc_id = aws_vpc.app-vpc.id
     cidr_block = "10.0.2.0/24"
-    availability_zone = "ap-south-1b"
+    availability_zone = "ap-south-1a"
     depends_on = [ aws_vpc.app-vpc ]
 
     tags = {
@@ -37,7 +37,7 @@ resource "aws_subnet" "app-private-subnet-1a" {
 resource "aws_subnet" "app-private-subnet-1b" {
     vpc_id = aws_vpc.app-vpc.id
     cidr_block = "10.0.3.0/24"
-    availability_zone = "ap-south-1c"
+    availability_zone = "ap-south-1a"
     depends_on = [ aws_vpc.app-vpc ]
 
     tags = {
@@ -74,7 +74,7 @@ resource "aws_subnet" "app-private-subnet-2a" {
 resource "aws_subnet" "app-private-subnet-2b" {
     vpc_id = aws_vpc.app-vpc.id
     cidr_block = "10.0.6.0/24"
-    availability_zone = "ap-south-1c"
+    availability_zone = "ap-south-1b"
     depends_on = [ aws_vpc.app-vpc ]
 
     tags = {

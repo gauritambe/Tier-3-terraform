@@ -1,7 +1,7 @@
 # 3-Tier Infrastructure
 
 ## Architecture
-![3-tier-infra](image.png)
+![3-tier-infra](3-tier_Terraform.jpg)
 
 ## Resources
 This repo will create the following resources in the Mumbai region:
